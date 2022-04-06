@@ -1,0 +1,85 @@
+@import "var.less";
+
+.contact-form {
+    background-image: url("https://preview.colorlib.com/theme/dento/img/bg-img/12.jpg");
+    position: relative;
+    padding: 100px 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: linear-gradient(to right,#2c455d,#00012c);
+        opacity: 0.85;
+
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    h3 {
+        color: @color-white;
+        margin-top: 0px;
+    }
+
+    input:not(.btn) , textarea, select {
+        background-color: rgba(0, 0, 0, 0.3);
+        border: none;
+        padding: 0 30px;
+        font-style: italic;
+        color: @color-white;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    input, select {
+        height: 50px;
+    }
+
+    select {
+        color: @color-white;
+    }
+
+    .contact-form-row {
+        display: flex;
+        margin: 0 -15px;
+        @media screen and (max-width: @mobile) {
+            flex-wrap: wrap;
+            
+        }
+
+        input, select {
+            flex-basis: 50%;
+            margin:15px;
+
+            @media screen and (max-width: @mobile) {
+                flex-basis: 100%;
+            }
+                
+            
+        }
+    }
+
+    textarea {
+        width: 100%;
+        margin: 15px 0;
+        padding: 15px;
+        resize: none;
+    }
+
+    .btn-center {
+        text-align: center;
+    }
+    
+    .btn {
+        cursor: pointer;
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,41 @@
+@import "var.less";
+
+.btn {
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 0 20px;
+    font-weight: 600px;
+    transition: all 0.7s;
+
+    &-sm {
+        min-width: 140px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 36px;
+    }
+
+    &-lg {
+        font-size: 14px;
+        min-width: 170px;
+        height: 46px;
+        line-height: 42px;
+    }
+
+    &-full-bg {
+        background-color: @color-blue;
+        border: 2px solid @color-blue;
+        color: @color-white;
+
+        &:hover {
+            background-color: transparent;
+            color: @color-blue;
+        }
+    }
+
+    &-border {
+        border: 2px solid @color-blue;
+        color: @color-blue;
+    }
+}
+

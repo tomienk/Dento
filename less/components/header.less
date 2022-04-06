@@ -1,0 +1,192 @@
+@import "var.less";
+
+.header {
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
+    .header-contact-info-bg {
+        background-color: #f4f4f4;
+
+        a {
+            color: @color-silver;
+            font-size: 12px;
+        }
+    }
+
+    .header-contact-info {
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+        @media screen and (max-width: @mobile) {
+            
+      }
+
+    }
+
+    .header-email-link {
+        margin-left: 30px;
+
+        @media screen and (max-width: @mobile) {
+            margin-left: 15px;
+        }
+            
+      
+    }
+
+    .top-header-content {
+        i {
+              color: @color-blue;
+              margin-right: 5px;  
+        }
+
+        @media screen and (max-width: @mobile) {
+            span {
+                display: none;
+            }
+        }
+    }
+
+    .social-icons {
+        margin-left: auto;
+
+        a {
+            margin-left: 10px;
+            
+            i {
+                font-size: 14px;
+                color: @color-silver;
+                transition: color 0.7s;
+            }
+
+            &:hover {
+                i {
+                    color: @color-blue;
+                }
+            }
+
+        }
+    }
+
+
+    .nav-wrapper {
+        background-color: @color-white;
+        padding: 20px 0;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            margin-right: auto;
+        }
+
+        .btn-booking {
+            margin-left: auto;
+        }
+    }
+
+    .navigation {
+        @media screen and (max-width: 1000px) {
+            
+            display: none;
+        }
+        a {
+            text-transform: uppercase;
+            color: @color-black;
+            font-size: 14px;
+            padding: 0 15px;
+            transition: color 0.7s;
+
+            &:hover {
+                color: @color-blue;
+            }
+        }
+
+        > ul {
+            display: flex;
+           > li {
+                position: relative;
+                >a {
+                    display: flex;
+
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+
+                ul {
+                    position: absolute;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: 3;
+                    top: 100%;
+                    background-color: @color-white;
+                    min-width: 180px;
+                    padding: 5px;
+                    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+                    transition: opacity 0.3s, visibility 0.3s ;
+
+                    a {
+                        text-transform: inherit;
+                        display: flex;
+                        padding: 5px;
+                        &::before {
+                            content: "-";
+                            margin-right: 3px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    ul:not(.sub-dropdown) {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    
+                }
+            }
+
+            .sub-dropdown {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .has-sub-dropdown {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                }
+                &:hover{
+                     .sub-dropdown {
+                        opacity: 1;
+                        visibility: visible;
+                        left: 100%;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-menu {
+        display: none;
+        i {
+            font-size: 30px;
+            margin-left: 20px;
+            color: #858585;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 1000px) {
+            display: block;
+            
+        }
+    }
+}
+

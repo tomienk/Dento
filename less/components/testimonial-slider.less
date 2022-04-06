@@ -1,0 +1,68 @@
+@import "var.less";
+
+.testimonial-slider {
+    background-image: url("https://preview.colorlib.com/theme/dento/img/bg-img/7.jpg");
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: linear-gradient(to right,#2c455d,#00012c);
+        opacity: 0.85;
+
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .testimonial-slider-item {
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        @media screen and (max-width: @mobile) {
+            display: block;
+            
+        }
+        img {
+            border-radius: 50%;
+        }
+
+        .testimonial-content {
+            color: @color-white;
+            padding-left: 30px;
+            @media screen and (max-width: @mobile) {
+                padding-left: 0;
+                
+            }
+            
+            h5 {
+                font-size: 18px;
+                font-weight: normal;
+                font-style: italic;
+                line-height: 1.8;
+                margin-bottom: 0px;
+            }
+
+            h6 {
+                font-size: 16px;
+                font-weight: normal;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 14px;
+
+            }
+
+        }
+    }
+}

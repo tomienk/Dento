@@ -1,0 +1,40 @@
+@import "var.less";
+
+.pricing-list-table {
+    width: 100%;
+    text-align: left;
+    th{
+        background-color: @color-blue;
+        color: @color-white;
+        text-align: left;
+    }
+
+    td {
+        background-color: #f4f4f4;
+        color: @color-silver;
+        font-weight: bold;
+    }
+
+    th, td {
+        padding: 15px 30px;
+        border: 4px solid @color-white;
+
+        @media screen and (max-width: @mobile) {
+            font-size: 12px;
+            padding: 10px 15px;
+            
+        }
+
+    }
+}
+
+.pricing-list {
+    text-align: center;
+    padding: 100px 0;
+
+    a{
+        display: inline-block;
+        margin-top: 50px;
+
+    }
+}

@@ -1,0 +1,122 @@
+@import "var.less";
+
+.about-us {
+    padding: 80px 0;
+
+
+    .about-us-desc {
+        color: @color-silver;
+        font-size: 14px;
+        line-height: 1.9;
+        margin-bottom: 40px;
+    }
+
+    .about-us-text {
+        padding-left: 30px;
+        @media screen and (max-width: @mobile) {
+            padding-left: 0px;
+            
+        }
+    }
+
+    .about-us-stats {
+        display: flex;
+        flex-wrap: wrap;
+        span {
+            color: @color-title;
+            font-weight: bold;
+        }
+
+        .percent-wrapper {
+            flex-basis: 100%;
+            position: relative;
+            height: 10px;
+            background-color: #f4f4f4;
+            margin-top: 15px;
+            margin-bottom: 20px;
+
+            .percent-fill {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 84%;
+                height: 100%;
+                background-color: @color-blue;
+            }
+        }
+
+        .about-us-stats-percent {
+            margin-left: auto;
+        }
+    }
+
+    .about-us-expr {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+
+        @media screen and (max-width: @mobile) {
+            display: block;
+            
+        }
+
+        i, span {
+            display: block;
+
+        }
+
+        i {
+            font-size: 50px;
+            color: @color-blue;
+        }
+
+        .about-us-expr-item {
+            flex-basis: 25%;
+            padding: 0 10px;
+            @media screen and (max-width: @mobile) {
+                margin-top: 50px;
+                margin-bottom: 100px;
+                
+            }
+
+            @media screen and (min-width: 769px) and (max-width: @tablet) {
+                flex-basis: 50%;
+                margin-bottom: 100px;
+                
+            }
+        }
+
+        .about-us-expr-item-num {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .about-us-expr-item-text {
+            font-size: 18px;
+        }
+    }
+
+}
+
+.about-us-wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 3px solid #f4f4f4 ;
+
+    img {
+        max-width: 50%;
+        @media screen and (max-width: @mobile) {
+            max-width: 100%;
+            
+        }
+    }
+
+    @media screen and (max-width: @mobile) {
+        display: block;
+        
+    }
+}
+
